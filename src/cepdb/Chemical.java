@@ -4,18 +4,20 @@ public class Chemical {
     String name;
     String symbol;
     int atomNum;
-    int massNum;
+    int massNumOfCommonIsotope;
     int valence;
     int neutronCount;
-    int electronCount;
+    int electronCountUnstable;
+    int electronCountStableOctet;
     
-    public Chemical(String name, String symbol, int atomNum, int massNum, int valence, int neutronCount, int electronCount) {
+    public Chemical(String name, String symbol, int atomNum, int massNumOfCommonIsotope, int valence, int neutronCount) {
         this.name = name;
         this.symbol = symbol;
         this.atomNum = atomNum;
-        this.massNum = massNum;
+        this.massNumOfCommonIsotope = massNumOfCommonIsotope;
         this.valence = valence;
         this.neutronCount = neutronCount;
-        this.electronCount = electronCount;
+        this.electronCountUnstable = atomNum;
+        this.electronCountStableOctet = atomNum - valence;
     }
 }
